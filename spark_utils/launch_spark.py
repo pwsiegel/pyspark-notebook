@@ -3,10 +3,6 @@ from pyspark.sql import SparkSession
 import boto3
 import os
 
-DEFAULT_AWS_CREDS_PATH = os.path.join(os.path.expanduser("~"), ".aws/credentials")
-os.environ[
-    "PYSPARK_SUBMIT_ARGS"
-] = '--packages "org.apache.hadoop:hadoop-aws:3.1.0" pyspark-shell'
 findspark.init()
 
 
