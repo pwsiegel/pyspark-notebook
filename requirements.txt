@@ -1,4 +1,3 @@
 pyspark
 pandas
 jupyterlab
-boto3
