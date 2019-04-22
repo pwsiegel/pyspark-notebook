@@ -48,3 +48,6 @@ Some tips:
 1. Check the arguments being passed to `pyspark` in this script before running it.  For instance, the default value `--executor-memory 220G` assumes that you are running your Spark cluster on instances with over 220G of memory, which may or may not be correct.
 2. You might want to run this script in a screen session in case your SSH connection dies.  Be warned: if your connection dies or if you close the Jupyter tab in your browser then any jobs you are running will complete but you will lose the output even when you reconnect to the server and reopen your notebook.  For long-running jobs it is best to write the output of the computation to your disk or to S3 in the same cell that initiates the computation so that you can reload the output when you reconnect.
 3. If you would like to use a RDD transformation or UDF which requires a special Python dependency, you should be able to install it using `flintrock run-command pip install my-package`.  This of course assumes that Python and `pip` have been installed on all of the workers as well as the master.
+
+[1]: https://github.com/nchammas/flintrock
+[2]: https://github.com/pyenv/pyenv
