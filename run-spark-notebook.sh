@@ -1,6 +1,7 @@
 #!/bin/bash
+set -eou pipefail
 
-export PORT=8888
+export PORT="$1"
 export DRIVER_MEMORY=30G
 export EXECUTOR_MEMORY=220G
 export MAX_RESULTS_SIZE=4G
