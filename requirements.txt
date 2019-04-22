@@ -1,5 +1,3 @@
 pyspark
-findspark
 pandas
 jupyterlab
-boto3
