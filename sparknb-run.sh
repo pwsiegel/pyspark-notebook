@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eou pipefail
 
-port={1:-}
+port=${1:-}
 if [[ -z "$port" ]]; then
     echo "Usage: ./sparknb-run.sh <port-number>"
     exit 1
