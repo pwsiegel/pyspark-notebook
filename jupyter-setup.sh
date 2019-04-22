@@ -11,5 +11,4 @@ pyenv global 3.7.2
 pip install -r requirements.txt
 curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
 sudo yum install -y nodejs
-jupyter labextension install jupyterlab_vim
 exec "$SHELL"
