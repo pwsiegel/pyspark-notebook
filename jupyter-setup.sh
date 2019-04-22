@@ -1,4 +1,7 @@
 #!/bin/bash
+set -eou pipefail
+
+# Disclaimer: this has been tested on the Amazon Linux 2 AMI, and will likely error out in other environments.
 
 # Install python dependencies
 sudo yum -y install git gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
