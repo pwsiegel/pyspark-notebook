@@ -1,5 +1,4 @@
 #!/bin/bash
-set -eou pipefail
 
 # Disclaimer: this has been tested on the Amazon Linux 2 AMI, and will likely error out in other environments.
 # It assumes that you have already installed git; if this is incorrect, execute the command `sudo yum install -y git`.
