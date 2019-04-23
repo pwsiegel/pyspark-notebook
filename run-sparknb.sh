@@ -12,7 +12,7 @@ EXECUTOR_MEMORY=220G
 MAX_RESULTS_SIZE=4G
 
 export PYSPARK_DRIVER_PYTHON=jupyter
-export PYSPARK_DRIVER_PYTHON_OPTS="lab --no-browser --port=$port"
+export PYSPARK_DRIVER_PYTHON_OPTS="lab --no-browser --notebook-dir=$HOME --port=$port"
 
 pyspark --packages "org.apache.hadoop:hadoop-aws:3.1.0" \
         --master spark://"$(hostname -I | tr -d ' ')":7077 \
