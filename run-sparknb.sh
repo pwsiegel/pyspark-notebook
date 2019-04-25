@@ -1,11 +1,7 @@
 #!/bin/bash
 set -eou pipefail
 
-port=${1:-}
-if [[ -z "$port" ]]; then
-    echo "Usage: ./sparknb-run.sh <port-number>"
-    exit 1
-fi
+port=${1:?Usage: ./sparknb-run.sh <port-number>}
 
 DRIVER_MEMORY=30G
 EXECUTOR_MEMORY=220G
