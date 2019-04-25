@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eou pipefail
 
-port=${1:?Usage: ./sparknb-run.sh <port-number>}
+port=${1:?Usage: ./run-sparknb.sh <port-number>}
 
 DRIVER_MEMORY=30G
 EXECUTOR_MEMORY=220G
