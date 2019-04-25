@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 set -eou pipefail
 
 # Disclaimer: this has been tested on the Amazon Linux 2 AMI, and will likely error out in other environments.
