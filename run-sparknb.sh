@@ -7,6 +7,7 @@ DRIVER_MEMORY=30G
 EXECUTOR_MEMORY=220G
 MAX_RESULTS_SIZE=4G
 
+export SPARK_HOME=${SPARK_HOME:-$HOME/spark}
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS="lab --no-browser --notebook-dir=$HOME --port=$port"
 
