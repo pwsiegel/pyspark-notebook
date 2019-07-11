@@ -22,17 +22,15 @@ set -u
 # Install python 3.7.3 and dependencies
 pyenv install 3.7.3
 pyenv global 3.7.3
-pip install --user pipenv
-pyenv global system
-pipenv install
+pip install -r requirements.txt
 
 # Install node and npm for jupyter plugins
 curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
 sudo yum install -y nodejs
 
 # Install Jupyter plugins
-pipenv run jupyter labextension install @jupyterlab/plotly-extension
-pipenv run jupyter labextension install jupyterlab_vim
+jupyter labextension install @jupyterlab/plotly-extension
+jupyter labextension install jupyterlab_vim
 
 # Start a new shell (needed to make jupyter and other stuff work)
 exec "$SHELL"
