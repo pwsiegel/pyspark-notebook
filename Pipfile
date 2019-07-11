@@ -9,6 +9,7 @@ verify_ssl = true
 pyspark = "*"
 pandas = "*"
 jupyterlab = "*"
+plotly = "*"
 
 [requires]
 python_version = "3.7"
