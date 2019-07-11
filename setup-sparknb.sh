@@ -31,8 +31,8 @@ curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
 sudo yum install -y nodejs
 
 # Install Jupyter plugins
-jupyter labextension install @jupyterlab/plotly-extension
-jupyter labextension install jupyterlab_vim
+pipenv run jupyter labextension install @jupyterlab/plotly-extension
+pipenv run jupyter labextension install jupyterlab_vim
 
 # Start a new shell (needed to make jupyter and other stuff work)
 exec "$SHELL"
