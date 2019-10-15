@@ -8,7 +8,7 @@ verify_ssl = true
 [packages]
 pyspark = "*"
 pandas = "*"
-jupyterlab = "==0.35.6"
+jupyterlab = "*"
 plotly = "*"
 
 [requires]
