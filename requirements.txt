@@ -1,3 +1,5 @@
-pyspark
-pandas
 jupyterlab
+pandas
+plotly
+pyspark
+sklearn
