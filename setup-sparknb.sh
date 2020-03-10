@@ -5,6 +5,12 @@ set -eou pipefail
 # It assumes that you have already installed git; if this is incorrect, execute the command `sudo yum install -y git`.
 # TODO: include limits.conf and bashrc, -N flag on ssh to port forward without ssh
 
+# Increase the open files limit by adding the following to the end of `/etc/security/limits.conf` (without the # symbols)
+# *         hard    nofile      500000
+# *         soft    nofile      500000
+# root      hard    nofile      500000
+# root      soft    nofile      500000
+
 # Install python dependencies
 sudo yum -y install git gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
 
