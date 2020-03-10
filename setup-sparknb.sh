@@ -25,9 +25,9 @@ set +u
 source "$HOME"/.bashrc
 set -u
 
-# Install python 3.7.4 and dependencies
-pyenv install 3.7.4
-pyenv global 3.7.4
+# Install python 3.7.5 and dependencies
+pyenv install 3.7.5
+pyenv global 3.7.5
 pip install -r requirements.txt
 
 # Install node and npm for jupyter plugins
