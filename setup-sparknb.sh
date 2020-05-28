@@ -3,7 +3,6 @@ set -eou pipefail
 
 # Disclaimer: this has been tested on the Amazon Linux 2 AMI, and will likely error out in other environments.
 # It assumes that you have already installed git; if this is incorrect, execute the command `sudo yum install -y git`.
-# TODO: include limits.conf and bashrc, -N flag on ssh to port forward without ssh
 
 # Increase the open files limit by adding the following to the end of `/etc/security/limits.conf` (without the # symbols)
 # *         hard    nofile      500000
@@ -35,7 +34,7 @@ curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash -
 sudo yum install -y nodejs
 
 # Install Jupyter plugins
-jupyter labextension install @jupyterlab/plotly-extension
+# jupyter labextension install @jupyterlab/plotly
 # jupyter labextension install jupyterlab_vim
 
 # Start a new shell (needed to make jupyter and other stuff work)
