@@ -26,4 +26,5 @@ build/mvn -Pyarn -Phadoop-3.1 -Pscala-2.12 -Dhadoop.version=3.1.2 -DskipTests cl
 
 echo "# Spark" >> "$HOME"/.bashrc
 echo 'export SPARK_HOME=/opt/spark-2.4.5' >> "$HOME"/.bashrc
+echo 'export PATH="$PATH:$SPARK_HOME/bin"' >> "$HOME"/.bashrc
 echo "" >> "$HOME"/.bashrc
