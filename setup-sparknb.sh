@@ -10,11 +10,29 @@ set -eou pipefail
 # root      hard    nofile      500000
 # root      soft    nofile      500000
 
+# Install Java
+sudo yum install -y java-1.8.0-openjdk-devel
+
+echo "# Java" >> "$HOME"/.bashrc
+echo "export JAVA_HOME=\"$(dirname $(dirname $(readlink -f $(which javac))))\"" >> "$HOME"/.bashrc
+echo "" >> "$HOME"/.bashrc
+
+# Install Maven
+wget "https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz" -P /tmp
+sudo tar -xf /tmp/apache-maven-3.6.3-bin.tar.gz -C /opt
+
+echo "# Maven" >> "$HOME"/.bashrc
+echo 'export M2_HOME=/opt/apache-maven-3.6.3' >> "$HOME"/.bashrc
+echo 'export MAVEN_HOME=/opt/apache-maven-3.6.3' >> "$HOME"/.bashrc
+echo 'export PATH=${M2_HOME}/bin:${PATH}' >> "$HOME"/.bashrc
+echo "" >> "$HOME"/.bashrc
+
 # Install python dependencies
 sudo yum -y install git gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel libffi-devel findutils
 
 # Install pyenv
 git clone https://github.com/pyenv/pyenv.git "$HOME"/.pyenv
+echo '# Python' >> "$HOME"/.bashrc
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> "$HOME"/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> "$HOME"/.bashrc
 echo 'eval "$(pyenv init -)"' >> "$HOME"/.bashrc
